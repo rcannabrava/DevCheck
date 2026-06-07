@@ -7,10 +7,7 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
     setupFiles: ["./src/tests/setup.ts"],
-    include: [
-      "src/**/*.test.ts",
-      "src/**/*.test.tsx",
-    ],
+    include: ["src/**/*.test.ts", "src/**/*.test.tsx"],
     exclude: ["src/routes/**", "node_modules/**", "dist/**", ".lovable/**"],
     coverage: {
       provider: "v8",

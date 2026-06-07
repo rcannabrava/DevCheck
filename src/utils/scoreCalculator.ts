@@ -43,9 +43,7 @@ export function calculateScore(answers: ChecklistAnswers): ScoreResult {
   const overall =
     byCategory.length === 0
       ? 0
-      : Math.round(
-          byCategory.reduce((sum, entry) => sum + entry.score, 0) / byCategory.length,
-        );
+      : Math.round(byCategory.reduce((sum, entry) => sum + entry.score, 0) / byCategory.length);
 
   return { overall, byCategory };
 }
@@ -77,7 +75,10 @@ export function buildImprovementTips(answers: ChecklistAnswers): ImprovementTip[
 export function buildDiagnosis(projectName: string, result: ScoreResult): string {
   const sorted = [...result.byCategory].sort((a, b) => b.score - a.score);
   const strengths = sorted.slice(0, 2).filter((entry) => entry.score >= 60);
-  const weaknesses = [...sorted].reverse().slice(0, 2).filter((entry) => entry.score < 60);
+  const weaknesses = [...sorted]
+    .reverse()
+    .slice(0, 2)
+    .filter((entry) => entry.score < 60);
 
   const name = projectName.trim() || "Este projeto";
   const overallLabel =

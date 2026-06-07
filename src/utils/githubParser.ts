@@ -19,9 +19,7 @@ export function parseGithubUrl(input: string): ParsedRepo | null {
     : trimmed;
 
   try {
-    const url = new URL(
-      candidate.startsWith("http") ? candidate : `https://${candidate}`,
-    );
+    const url = new URL(candidate.startsWith("http") ? candidate : `https://${candidate}`);
     if (!url.hostname.endsWith(GITHUB_HOST)) return null;
     const segments = url.pathname.split("/").filter(Boolean);
     if (segments.length < 2) return null;

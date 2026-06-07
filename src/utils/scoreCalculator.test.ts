@@ -71,9 +71,7 @@ describe("calculateScore", () => {
       "tests-integration": "partial",
       "tests-coverage": "partial",
     });
-    const testingCategory = result.byCategory.find(
-      (entry) => entry.categoryId === "testing",
-    );
+    const testingCategory = result.byCategory.find((entry) => entry.categoryId === "testing");
     expect(testingCategory?.score).toBe(50);
   });
 });

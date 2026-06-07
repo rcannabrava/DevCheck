@@ -1,10 +1,5 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import {
-  HISTORY_KEY,
-  clearHistory,
-  loadHistory,
-  saveHistoryEntry,
-} from "./historyManager";
+import { HISTORY_KEY, clearHistory, loadHistory, saveHistoryEntry } from "./historyManager";
 import type { HistoryEntry } from "@/types";
 
 function makeEntry(overrides: Partial<HistoryEntry> = {}): HistoryEntry {
