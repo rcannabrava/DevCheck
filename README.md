@@ -128,6 +128,32 @@ Qualquer falha em uma das etapas reprova o build do PR.
 
 O conteúdo gerado em `dist/` também funciona em Netlify, Cloudflare Pages ou qualquer hospedagem estática.
 
+## Alinhamento com ISO 9126
+
+A norma ISO 9126 define seis características de qualidade de software. Os cinco pilares do DevCheck mapeiam diretamente para essas características:
+
+| Pilar DevCheck | Característica ISO 9126 | Justificativa |
+| --- | --- | --- |
+| Testes Automatizados | **Confiabilidade** | Testes garantem maturidade, tolerância a falhas e recuperabilidade do sistema |
+| Documentação | **Manutenibilidade** | Documentação melhora analisabilidade e capacidade de mudança do código |
+| CI/CD | **Portabilidade** | Pipelines automatizados viabilizam implantação consistente em diferentes ambientes |
+| Qualidade de Código | **Manutenibilidade** | Linting, formatação e convenções reduzem a complexidade e facilitam mudanças |
+| Arquitetura & Versionamento | **Manutenibilidade** | Estrutura clara e histórico de commits diminuem o custo de evolução do sistema |
+
+## Alinhamento com MPS.BR
+
+O MPS.BR (Melhoria de Processo do Software Brasileiro) organiza a maturidade de processos em níveis e áreas de processo. Os pilares do DevCheck cobrem as seguintes áreas:
+
+| Pilar DevCheck | Área de Processo MPS.BR | Nível de Maturidade |
+| --- | --- | --- |
+| Testes Automatizados | **VER** — Verificação / **VAL** — Validação | G (básico) |
+| Documentação | **GRH** — Gerência de Recursos Humanos | F |
+| CI/CD | **GCO** — Gerência de Configuração | G (básico) |
+| Qualidade de Código | **GQA** — Garantia da Qualidade | G (básico) |
+| Arquitetura & Versionamento | **DES** — Desenvolvimento | C |
+
+> As áreas de processo VER, VAL, GCO e GQA pertencem ao nível G (patamar mínimo exigido pelo MPS.BR), que é o ponto de entrada para a certificação.
+
 ## Alinhamento com sustentabilidade
 
 - **ODS 4 — Educação de Qualidade**: reforça boas práticas de engenharia através de feedback acionável.

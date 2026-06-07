@@ -34,6 +34,8 @@ export default tseslint.config(
       ],
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
       "@typescript-eslint/no-unused-vars": "off",
+      // Complexidade ciclomática: funções com mais de 10 caminhos independentes geram aviso
+      complexity: ["warn", 10],
     },
   },
   eslintPluginPrettier,

@@ -11,6 +11,10 @@ export interface ChecklistCategory {
   name: string;
   description: string;
   questions: ChecklistQuestion[];
+  /** ISO 9126 characteristic this category maps to */
+  iso9126: string;
+  /** MPS.BR process area this category maps to */
+  mpsbr: string;
 }
 
 export type ChecklistAnswers = Record<string, AnswerValue>;

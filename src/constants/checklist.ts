@@ -5,6 +5,8 @@ export const CHECKLIST: readonly ChecklistCategory[] = [
     id: "testing",
     name: "Testes Automatizados",
     description: "Confiança para lançar sem quebrar nada.",
+    iso9126: "Confiabilidade",
+    mpsbr: "VER — Verificação / VAL — Validação",
     questions: [
       {
         id: "tests-unit",
@@ -27,6 +29,8 @@ export const CHECKLIST: readonly ChecklistCategory[] = [
     id: "docs",
     name: "Documentação",
     description: "Outros engenheiros não deveriam precisar te perguntar.",
+    iso9126: "Manutenibilidade",
+    mpsbr: "GRH — Gerência de Recursos Humanos",
     questions: [
       {
         id: "docs-readme",
@@ -49,6 +53,8 @@ export const CHECKLIST: readonly ChecklistCategory[] = [
     id: "cicd",
     name: "CI/CD",
     description: "Entrega segura, repetível e automatizada.",
+    iso9126: "Portabilidade",
+    mpsbr: "GCO — Gerência de Configuração",
     questions: [
       {
         id: "ci-pipeline",
@@ -71,6 +77,8 @@ export const CHECKLIST: readonly ChecklistCategory[] = [
     id: "quality",
     name: "Qualidade de Código",
     description: "Código que o seu eu do futuro ainda consegue ler.",
+    iso9126: "Manutenibilidade",
+    mpsbr: "GQA — Garantia da Qualidade de Software",
     questions: [
       {
         id: "quality-linter",
@@ -98,6 +106,8 @@ export const CHECKLIST: readonly ChecklistCategory[] = [
     id: "arch",
     name: "Arquitetura & Versionamento",
     description: "Um repositório que um novo dev consegue navegar no primeiro dia.",
+    iso9126: "Manutenibilidade",
+    mpsbr: "DES — Desenvolvimento",
     questions: [
       {
         id: "arch-structure",

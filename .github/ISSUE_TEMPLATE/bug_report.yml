@@ -1,0 +1,76 @@
+name: Relatório de Defeito
+description: Registre um bug para rastreamento da taxa de defeitos (ISO 9126 — Confiabilidade)
+title: "[BUG] "
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use este template para registrar defeitos. Os dados coletados alimentam a métrica
+        **taxa de defeitos** (defeitos encontrados / tamanho funcional), alinhada com a
+        característica **Confiabilidade** da ISO 9126 e com a área de processo
+        **VAL — Validação** do MPS.BR.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severidade
+      description: Qual o impacto do defeito no sistema?
+      options:
+        - "Crítico — impede uso principal"
+        - "Alto — funcionalidade importante quebrada"
+        - "Médio — funcionalidade degradada, existe contorno"
+        - "Baixo — cosmético ou edge case"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Categoria (pilar DevCheck afetado)
+      description: Em qual pilar o defeito foi encontrado?
+      options:
+        - "Testes Automatizados"
+        - "Documentação"
+        - "CI/CD"
+        - "Qualidade de Código"
+        - "Arquitetura & Versionamento"
+        - "Outro"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição do defeito
+      description: Descreva o comportamento incorreto.
+      placeholder: "O que aconteceu? O que deveria ter acontecido?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      placeholder: |
+        1. Acesse /setup
+        2. Preencha ...
+        3. Clique em ...
+        4. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto adicional (navegador, versão, screenshot)
+      required: false
