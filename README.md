@@ -4,8 +4,6 @@ Ferramenta de checklist de boas práticas para engenharia sênior. Avalia a qual
 
 O DevCheck audita projetos em cinco pilares de engenharia — Testes Automatizados, Documentação, CI/CD, Qualidade de Código e Arquitetura & Versionamento — e devolve uma pontuação geral (0–100), um diagnóstico narrativo curto e dicas priorizadas de melhoria. Opcionalmente consome dados públicos de repositórios do GitHub para pré-preencher respostas.
 
-![Captura de tela do DevCheck](./docs/screenshot.png)
-
 ## Stack
 
 | Camada          | Biblioteca / Ferramenta                  |
